@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
 using Data;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine.UI;
 
 namespace Cards
 {
-    public class CreatureCard : MonoBehaviour
+    public class CreatureCard : MonoBehaviour, ICard, IDraggable
     {
         [SerializeField] private CreatureCardData cardData;
         
@@ -27,6 +28,16 @@ namespace Cards
             healthText.text = cardData.health.ToString();
             descriptionText.text = cardData.description;
             
+        }
+
+        public void OnStartDrag()
+        {
+            Debug.Log("YOOO I am getting dragged :D");
+        }
+
+        public void OnEndDrag()
+        {
+            Debug.Log("OW well that was fun :#");
         }
     }
 }
