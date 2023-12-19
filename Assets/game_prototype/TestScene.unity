@@ -267,7 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1924a08e34b401bb453c7f5387da02d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parameters: {fileID: 11400000, guid: f79f21692e2d8a746b39e9a2eadfd5df, type: 2}
+  bendAngle: 20
+  bendHeight: 0.12
+  bendSpacing: -2
   cardPrefab: {fileID: 4117609574083128017, guid: 041b51ec99b7c9f4981e40fc17cd2474, type: 3}
   pivot: {fileID: 537504238}
 --- !u!4 &468954929
@@ -1875,7 +1877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4579114429406370026
 Transform:
   m_ObjectHideFlags: 0
@@ -2325,7 +2327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6494204316416171914
 Transform:
   m_ObjectHideFlags: 0
