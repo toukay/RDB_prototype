@@ -119,6 +119,12 @@ namespace Cards.StateMachine
         }
         
         #region Motion
+
+
+        public bool isMotionDone()
+        {
+            return !_targetScale.HasValue && !_targetPosition.HasValue && !_targetRotation.HasValue;
+        }
         
         public void RotateTo(Vector3 newEulerRotation)
         {

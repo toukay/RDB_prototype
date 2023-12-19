@@ -19,8 +19,6 @@ namespace Cards.StateMachine.SubStates
             base.Enter();
             
             Debug.Log("Entered Idle State");
-
-            isTransitionDone = true;
         }
 
         public override void Exit()
@@ -33,10 +31,13 @@ namespace Cards.StateMachine.SubStates
             base.Update();
             
             _isHovering = card.IsHovering;
-            
-            if (_isHovering)
+
+            if (card.isMotionDone())
             {
-                stateMachine.ChangeState(card.HoverState);
+                if (_isHovering)
+                {
+                    stateMachine.ChangeState(card.HoverState);
+                } 
             }
         }
         

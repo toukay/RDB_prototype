@@ -27,6 +27,7 @@ namespace Cards.StateMachine.SubStates
             base.Enter();
             
             _isDragDone = false;
+            isCustomMotionDone = false;
             Debug.Log("Entered Drag State");
             
             _mainCamera = card.inputHandler.MainCamera;
@@ -39,13 +40,13 @@ namespace Cards.StateMachine.SubStates
             
             ResetRender();
             ResetTransformValues();
+
+            isCustomMotionDone = true;
         }
         
         public override void Update()
         {
             base.Update();
-            
-            card.UpdateHandScale();
             
             DragUpdate();
             

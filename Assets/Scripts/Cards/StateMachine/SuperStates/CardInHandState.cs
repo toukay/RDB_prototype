@@ -4,7 +4,7 @@ namespace Cards.StateMachine.SuperStates
 {
     public class CardInHandState : CardState
     {
-        protected bool isTransitionDone;
+        protected bool isCustomMotionDone;
         
         protected Vector3 OriginalPosition;
         protected Vector3 OriginalEulerAngles;
@@ -20,7 +20,8 @@ namespace Cards.StateMachine.SuperStates
         public override void Enter()
         {
             base.Enter();
-            isTransitionDone = false;
+
+            isCustomMotionDone = true;
         }
 
         public override void Exit()
@@ -31,7 +32,8 @@ namespace Cards.StateMachine.SuperStates
         public override void Update()
         {
             base.Update();
-            if (isTransitionDone)
+
+            if (isCustomMotionDone)
             {
                 card.UpdateHandScale();
                 card.UpdateHandRotation();
@@ -48,9 +50,9 @@ namespace Cards.StateMachine.SuperStates
         {
             Debug.Log("OK SAVING THIS POSS");
             Transform transform = card.transform;
-            OriginalPosition = transform.position;
-            OriginalEulerAngles = transform.eulerAngles;
-            OriginalScale = transform.localScale;
+            OriginalPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            OriginalEulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z);
+            OriginalScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
         }
         
         protected void ResetTransformValues()
