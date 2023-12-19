@@ -264,8 +264,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9003599785990078836}
+  - component: {fileID: 2520715739537785613}
   - component: {fileID: 4864000419750982239}
-  - component: {fileID: 8662573299105254649}
   - component: {fileID: 259979411463149182}
   m_Layer: 0
   m_Name: Creature Card
@@ -284,7 +284,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.65, y: 0.65, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5395682570665138940}
@@ -296,6 +296,21 @@ Transform:
   - {fileID: 3819966759457917789}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2520715739537785613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4117609574083128017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3686247760b4f2fb7606b1b399c324a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputHandler: {fileID: 0}
+  handPosition: {fileID: 0}
+  mouseDragSpeed: 0
 --- !u!114 &4864000419750982239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,37 +330,6 @@ MonoBehaviour:
   healthText: {fileID: 218391805994209779}
   descriptionText: {fileID: 2948891006838990364}
   artworkImage: {fileID: 0}
---- !u!114 &8662573299105254649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4117609574083128017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa176c8717fe78a48a326b7dbaf5e89a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseClick:
-    m_Name: Mouse Click
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: c5117e40-e6e5-46cc-b116-770ff8019f49
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 2bf9a6fa-0c07-4414-b998-278de4b27b32
-      m_Path: <Mouse>/leftButton
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Mouse Click
-      m_Flags: 0
-    m_Flags: 0
-  mouseDragPhysicsSpeed: 10
-  mouseDragSpeed: 0
 --- !u!61 &259979411463149182
 BoxCollider2D:
   m_ObjectHideFlags: 0
